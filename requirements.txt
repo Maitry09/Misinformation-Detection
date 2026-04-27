@@ -1,0 +1,12 @@
+streamlit
+transformers
+torch
+torchvision
+torchaudio
+shap
+matplotlib
+numpy
+huggingface_hub
+safetensors
+tokenizers
+python-dotenv
