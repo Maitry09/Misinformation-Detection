@@ -61,7 +61,8 @@ WhatsApp misinformation in Indian regional languages is a serious and growing pr
 
 ## 📊 Dataset
 
-- **Source:** [Zenodo — Multilingual Fake News Detection Dataset](https://zenodo.org/records/11408513)
+- **Source:** Extracted 4 different language dataset from [Zenodo — Multilingual Fake News Detection Dataset](https://zenodo.org/records/11408513)
+- **Dataset:** [Huggingface](https://huggingface.co/datasets/maitry30/Multilingual_Fake_News_Detection) | [Kaggle](https://www.kaggle.com/datasets/maitry09/fake-news)
 - **Total size:** 49,426 articles after cleaning
 - **Labels:** Fake `0` / Real `1`
 - **Columns:** `text`, `label`, `language`
@@ -88,20 +89,12 @@ verilang-misinformation-detector/
 ├── app.py                          # Streamlit web application
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # Project documentation
-├── shap_all_languages.png          # SHAP word importance chart
 │
 ├── notebooks/
-│   ├── misinfo_detection.ipynb     # Notebook 1: EDA + baseline ML
-│   └── misinfo_MuRIL.ipynb         # Notebook 2: MuRIL + Hinglish
-│
-└── outputs/
-    ├── data_distribution.png
-    ├── baseline_comparison.png
-    ├── confusion_matrix.png
-    ├── overfitting_check.png
-    └── shap_all_languages.png
-```
+    ├── misinfo_detection.ipynb     # Notebook 1: EDA + baseline ML
+    └── misinfo_MuRIL.ipynb         # Notebook 2: MuRIL + Hinglish
 
+```
 ---
 
 ## 🔬 Methodology
@@ -185,34 +178,6 @@ Mean: 99.75%  |  Std Dev: 0.05%  →  Highly consistent
 ## 🗣 Hinglish Support
 
 One of the key differentiators of VeriLang — full support for Romanized and Hinglish text as people type on WhatsApp.
-
-### Hinglish Test Results (Before → After)
-
-| Input | True | Before | After |
-|---|---|---|---|
-| "Yeh khabar bilkul jhooth hai share mat karo" | FAKE | REAL ❌ | FAKE ✅ |
-| "Maharashtra government ne naya yojana shuru kiya" | REAL | FAKE ❌ | REAL ✅ |
-| "Aa khabar khoti chhe share karva jaisi nathi" | FAKE | REAL ❌ | FAKE ✅ |
-| "Gujarat sarkar e navi yojana sharu kari chhe" | REAL | FAKE ❌ | REAL ✅ |
-| "Hi baatami khoti aahe share karu naka" | FAKE | REAL ❌ | FAKE ✅ |
-| "Ee news fake undi share cheyakandi vaddhu" | FAKE | REAL ❌ | FAKE ✅ |
-| "Yeh video fake hai aur sach nahi hai" | FAKE | — | FAKE ✅ |
-| "Delhi mein aaj election results aaye hain" | REAL | — | REAL ✅ |
-
-**Final Score: 8/8 (100%)** — all Hinglish inputs correctly classified
-
----
-
-## 🔍 Explainability — SHAP
-
-VeriLang uses **SHAP** to explain every prediction at the word level:
-
-- 🔴 Red words pushed the model toward the prediction
-- 🔵 Blue words pushed the model against the prediction
-
-This makes the model transparent — critical for any real-world fact-checking application.
-
-![SHAP](shap_all_languages.png)
 
 ---
 
