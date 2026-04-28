@@ -53,7 +53,6 @@ WhatsApp misinformation in Indian regional languages is a serious and growing pr
 | Model | Generic BERT | MuRIL — Indian language specialist |
 | Romanized text | Not supported | Fully supported (8/8 accuracy) |
 | Target domain | General news | WhatsApp forwards specifically |
-| Explainability | None | SHAP word importance per language |
 | Deployment | Jupyter only | Live web app with dark animated UI |
 | Dataset | Small CSV | 49,426 real-world articles |
 
@@ -279,7 +278,7 @@ Data loading → cleaning → EDA → TF-IDF → LR, SVM, NB training → per-la
 ### Notebook 2 — `misinfo_MuRIL.ipynb`
 MuRIL loading → tokenization → fine-tuning → evaluation → SHAP → Hinglish augmentation → Hinglish fine-tuning → HuggingFace upload
 
-**Outputs:** `muril_model_v2/`, `muril_test_predictions.csv`, `shap_all_languages.png`
+**Outputs:** `muril_model/`, `muril_test_predictions.csv`, `shap_all_languages.png`
 
 ---
 
