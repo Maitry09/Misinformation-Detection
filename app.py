@@ -85,7 +85,7 @@ a[href*="share.streamlit.io"] { display:none !important; }
     to   { opacity:1; transform:translateY(0); }
 }
 .hero {
-    text-align:center; padding:50px 20px 36px;
+    text-align:center; padding:0px 20px 36px;
     position:relative; z-index:1;
     animation:fadeUp 0.8s ease forwards;
 }
@@ -417,7 +417,7 @@ st.markdown("""
         <div class="stat-lbl">Indian Languages</div>
     </div>
     <div class="stat-box">
-        <div class="stat-num">99.92%</div>
+        <div class="stat-num">~99%</div>
         <div class="stat-lbl">Accuracy</div>
     </div>
     <div class="stat-box">
@@ -635,16 +635,16 @@ with right:
             <div class="fact-grid">
                 <a class="fact-link"
                    href="https://pib.gov.in/factcheck.aspx"
-                   target="_blank">🏛 PIB Fact Check</a>
+                   target="_blank" style="color: white; text-decoration: underline;">🏛 PIB Fact Check</a>
                 <a class="fact-link"
                    href="https://www.boomlive.in"
-                   target="_blank">💥 Boom Live</a>
+                   target="_blank" style="color: white; text-decoration: underline;">💥 Boom Live</a>
                 <a class="fact-link"
                    href="https://www.altnews.in"
-                   target="_blank">🔍 Alt News</a>
+                   target="_blank" style="color: white; text-decoration: underline;">🔍 Alt News</a>
                 <a class="fact-link"
                    href="https://www.vishvasnews.com"
-                   target="_blank">✅ Vishvas News</a>
+                   target="_blank" style="color: white; text-decoration: underline;">✅ Vishvas News</a>
             </div>
             """, unsafe_allow_html=True)
 
